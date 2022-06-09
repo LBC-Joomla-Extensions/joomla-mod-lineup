@@ -14,7 +14,7 @@ module.exports = {
         filename: "js/[name].js",
         path: path.resolve(__dirname,"dist"),
     },
-    watch: true,
+    watch: false,
     watchOptions:{
         ignored: /node_modules/
     },
@@ -47,13 +47,13 @@ module.exports = {
                 { from: path.resolve(__dirname,"vendor"), to: "vendor" },
                 { from: "./src/index.html", to: "index.html" },
                 { from: "./src/helper.php", to: "helper.php" },
-                { from: "./src/mod_modBase.php", to: "mod_modBase.php" },
-                { from: "./src/mod_modBase.xml", to: "mod_modBase.xml" },                
+                { from: "./src/mod_lineup.php", to: "mod_lineup.php" },
+                { from: "./src/mod_lineup.xml", to: "mod_lineup.xml" },                
             ],
         }),
         new ZipPlugin({
             path : '../dist_zip',
-            filename : 'j3mod_base.zip'
+            filename : 'modLineup.zip'
         }),
     ],
 };

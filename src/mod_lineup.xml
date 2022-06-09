@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.0" client="site" method="upgrade">
+    <name>Artwork showcase</name>
+    <author>Luis BC</author>
+    <version>1.0.0</version>
+    <description>Un módulo para mostrar poster,artwork y lineup</description>
+    <files>
+        <filename>mod_lineup.xml</filename>
+        <filename module="mod_lineup">mod_lineup.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>css/main.css</filename>
+        <filename>js/main.js</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field 
+                    name="categoria" 
+                    type="category"      
+                    extension="com_content"                 
+                    label="Categoria" 
+                    description="Categoria de los articulos con artwork">
+				</field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
