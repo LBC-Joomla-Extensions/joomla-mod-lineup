@@ -5,3 +5,112 @@
 
 // 2. Importar componentes
 @import 'components';
+
+
+:root{
+    --contenido-artwork:"poster";
+}
+
+.lineup-outer-wrapper{
+    position:relative;
+    margin-top:1rem;
+    width: 100%;
+}
+
+.lineup-outer-wrapper div{
+    width: 100%;
+    position:relative;
+}
+
+.lineup-outer-wrapper::before, .lineup-outer-wrapper::after{
+    content:var(--contenido-artwork);
+    -webkit-text-stroke-width:1px;
+    -webkit-text-stroke-color: var(--main-color);
+    position:absolute;
+    top:1rem;
+    z-index: 10;
+    font-size:2.5rem;
+    text-transform: uppercase;
+    color:rgba(0,0,0,0);
+}
+
+.lineup-outer-wrapper::before{
+    left:0;    
+    display:none;
+}
+
+.lineup-outer-wrapper::after{
+    right:0;    
+    display:none
+}
+
+.lineup-imagen{
+    width: 100%;
+    max-width: 100%;
+    /*position: absolute;*/
+    display: none;
+}
+
+.activo{
+    display: inline-block !important;    
+}
+
+#lineup-header{
+    display: flex;
+    justify-content: flex-start;    
+}
+
+#lineup-header h3{
+    cursor:pointer;
+    margin-right: 1.5rem;
+    margin-bottom: .25rem;
+    border:1px solid white;    
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    
+    color:white;
+    background-color: black;
+
+    &:hover, &:focus, .activo{
+        color: black;
+        background-color: white;
+        // border-color: black;
+    }
+}
+
+/***************************************/
+/*******    MEDIA QUERIES      *********/
+/***************************************/
+
+@media (min-width:599px){
+    .lineup-outer-wrapper::before,.lineup-outer-wrapper::after{
+        top:1.5rem;
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width:699px){
+
+}
+
+@media (min-width:799px){
+    .lineup-outer-wrapper::before,.lineup-outer-wrapper::after{        
+        font-size: 4rem;
+    }
+}
+
+@media (min-width:899px){
+
+}
+
+@media (min-width:1099px){
+    .lineup-outer-wrapper::before,.lineup-outer-wrapper::after{
+        font-size: 4.5rem;
+    }
+}
+
+@media (min-width:1199px){
+    .lineup-outer-wrapper::before,.lineup-outer-wrapper::after{
+        font-size: 5rem;
+    }
+}

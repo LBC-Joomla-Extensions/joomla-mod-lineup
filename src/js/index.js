@@ -1,5 +1,8 @@
 import '../styles/main.scss';
-import {abreMenu, cierraMenu} from './functions.js';
+import {cambiaImagen, imagenCargada, redimensionar} from './functions.js';
 
-window.abreMenu = abreMenu;
-window.cierraMenu = cierraMenu;
+window.cambiaImagen = cambiaImagen;
+window.imagenCargada = imagenCargada;
+window.redimensionar = redimensionar;
+
+
